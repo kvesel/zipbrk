@@ -1,6 +1,6 @@
-# zipbrk
+# zipbrk 2.1
 
-Zip break is a tool to disect, modify, and reassemble zip files for a variety of tasks. It is designed to be cross-platform and as simple as possible to port from varied systems. It has been tested on Windows 9x/2k/XP, Windows Vista/7/8, Fedora 23/24, Kali, Debian 8/9, Qubes 3.2, Whonix, Ubuntu 10, FreeBSD 11, and various Android phones. Some examples of usage are:
+Zip break is a tool to disect, modify, and reassemble zip files for a variety of tasks. It is designed to be cross-platform and as simple as possible to port between varied systems. It has been tested on Windows 9x/2k/XP, Windows Vista/7/8, Fedora 23/24, Kali, Debian 8/9, Qubes 3.2, Whonix, Ubuntu 10, FreeBSD 11, and various Android phones. Some examples of usage are:
 
 **zipbrk file.zip --encryption-set --xor-crc32**
   
@@ -20,6 +20,6 @@ Some anti-virus softwares have been known to not scan the contents of a file if 
 **--zero-uncompressed**
 
 
-In the event that a provider does not permit the transmission or storage of zip files (e.g. GMail, et al.) then the zip file signature can be changed to fool zip processors into assuming the file is not in zip format. The signature can then be changed back once it is received by the end-point.
+In the event that a provider does not permit the transmission or storage of zip files (e.g. GMail, et al.), the zip file signature can be changed to fool zip processors into assuming the file is not in zip format. The signature can then be changed back once it's received by the end-point.
 
 **--signature-spoof**
