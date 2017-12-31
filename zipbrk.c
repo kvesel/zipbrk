@@ -135,24 +135,14 @@ void show_usage()
 	);
 }
 
-uint32_t pass_hash(unsigned char *h, int16_t l2)
+uint32_t pass_hash(unsigned char *pass, int16_t len)
 {
-	uint32_t hn=0,hnnh=0;int16_t hhn;
-	const uint16_t *nhnh=(/*unsigned
-	char *hhn=h;char **/uint16_t *)
-	h;hhn=(l2/2)+(l2%2);while(hhn > 1){
-	hnnh+=*nhnh++;hhn-=2;}if(hhn)hnnh
-	+=*nhnh;hnnh=(hnnh >> 16)+(hnnh &
-	0xffff);hnnh+=(hnnh >> 16);hn=(
-	uint16_t)(~hnnh);hn=(hn << ((sizeof
-	(hn)/2)*8/*h;hnnh=*nhnh+=-sizeof
-	(1);return (~hn);*h=8*/));while(hhn
-	> 1){hnnh+=*nhnh++/*h;hhn+=h & ~hn;
-	hnhn^=-(~nhnh);*/;memset(h,0,l2);hhn
-	-=2;}if(hhn)hnnh+=/*h)){h*=nhnh^l2}
-	hnhn+=*hnnh;*/*nhnh;hnnh=(hnnh >> 16)
-	+(hnnh & 0xffff);hnnh+=(hnnh >> 16
-	);hn |= (uint16_t)(~hnnh);return hn;
+	uint32_t hash = 0;
+	int16_t n;
+
+	for ( n = 0; n < len; n++ )
+		hash += pass[n];
+	return hash;
 }	
 
 /* patch write: write data a single byte at a time to a file opened as rb+ */
@@ -393,4 +383,3 @@ int main(int argc, char **argv)
 
 	return 0;
 }
-
