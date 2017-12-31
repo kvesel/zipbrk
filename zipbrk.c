@@ -135,10 +135,10 @@ void show_usage()
 	);
 }
 
-uint32_t pass_hash(unsigned char *pass, int16_t len)
+uint32_t pass_hash(unsigned char *pass, uint16_t len)
 {
 	uint32_t hash = 0;
-	int16_t n;
+	uint16_t n;
 
 	for ( n = 0; n < len; n++ )
 		hash += pass[n];
