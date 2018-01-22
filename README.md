@@ -15,7 +15,7 @@ A safer alternative would be to perhaps encrypt a zip file, and then make it app
 **--encryption-unset**
 
 
-Some anti-virus softwares have been known to not scan the contents of a file if the Uncompressed Size parameter of the file header is set to 0 bytes in size.
+Some anti-virus softwares have been known to not scan the contents of a file (CVE-2004-0932, et al.) if the Uncompressed Size parameter of the file header is set to 0 bytes in size.
 
 **--zero-uncompressed**
 
