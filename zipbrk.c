@@ -1,3 +1,35 @@
+/*
+ * Zip Break (zipbrk)
+ * zip file format fuzzer and multi-tool
+ *
+ * Originally designed to implement CVE-2004-0932, et al.
+ * and later expanded to modify a range of values for various
+ * purposes. Updated to support 64-bit platforms and tested
+ * on an array of modern operating systems and architectures
+ * to include:
+ *    armhf
+ *    arm7l
+ *    ia64/amd64
+ *    x86
+ *    Debian 8/9
+ *    Windows 2000/XP
+ *    Windows Vista/7/8
+ *    Windows 10
+ *    Nethunter
+ *    Kali 2017.x
+ *    FreeBSD 11
+ *    NetBSD
+ *    Fedora 23/24
+ *    Raspbian
+ *    iOS 10/11
+ *    Android OnePlus X Onyx
+ *
+ * You are free to use, modify, and distribute this program as
+ * you see fit for personal, commercial, or government needs.
+ *
+ * No point-of-contact for support is provided or implied. This
+ * code is provided as-is.
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
