@@ -3,7 +3,7 @@
 #include <stdint.h>
 #include <string.h>
 
-#define ZIPBRK_VERSION    "2.1.1"
+#define ZIPBRK_VERSION    "2.1.1a"
 
 #pragma pack(push, 1)
 typedef struct s_local_hdr
@@ -167,7 +167,7 @@ void patch_zip(const char *filename)
 {
     FILE *hfile;
     uint32_t buffer;
-    uint32_t offset;
+    long offset;
 
     if ( (hfile = fopen(filename, "rb+") ) == NULL) {
         printf("[!] Error: Unable to open %s\n", filename); return; }
