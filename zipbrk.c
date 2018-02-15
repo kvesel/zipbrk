@@ -19,7 +19,7 @@
  *    Kali 2017.x
  *    FreeBSD 11
  *    NetBSD
- *    Fedora 23/24
+ *    Fedora 23/24/25
  *    Raspbian
  *    iOS 10/11
  *    Android OnePlus X Onyx
@@ -35,7 +35,7 @@
 #include <stdint.h>
 #include <string.h>
 
-#define ZIPBRK_VERSION    "2.1.1a"
+#define ZIPBRK_VERSION    "2.1.1b"
 
 #pragma pack(push, 1)
 typedef struct s_local_hdr
@@ -178,8 +178,8 @@ uint32_t pass_hash(unsigned char *pass, uint16_t len)
     return hash;
 }    
 
-/* patch write: write data a single byte at a time to a file opened as rb+ */
-size_t patch_write(const void *buffer, size_t size, size_t count, FILE *stream)
+/* pwrite: write data a single byte at a time to a file opened as rb+ */
+size_t pwrite(const void *buffer, size_t size, size_t count, FILE *stream)
 {
     const unsigned char *p;
     size_t c, s, len;
@@ -243,7 +243,7 @@ void patch_zip(const char *filename)
             if (FLAGS & DSFLAG)
                 lh.sig = PK_LOCALHDR;
 
-            patch_write(&lh, sizeof(lh), 1, hfile);
+            pwrite(&lh, sizeof(lh), 1, hfile);
             fseek(hfile, offset, SEEK_SET);
         }
 
@@ -282,7 +282,7 @@ void patch_zip(const char *filename)
             if (FLAGS & DSFLAG)
                 ch.sig = PK_CENTRALHDR;
 
-            patch_write(&ch, sizeof(ch), 1, hfile);
+            pwrite(&ch, sizeof(ch), 1, hfile);
             fseek(hfile, offset, SEEK_SET);
         }
 
@@ -301,7 +301,7 @@ void patch_zip(const char *filename)
             if (FLAGS & DSFLAG)
                 ce.sig = PK_CENTRALEND;
             
-            patch_write(&ce, sizeof(ce), 1, hfile);
+            pwrite(&ce, sizeof(ce), 1, hfile);
             fseek(hfile, offset, SEEK_SET);
         }
         fseek(hfile, -(sizeof(buffer) - 1), SEEK_CUR);
