@@ -1,0 +1,99 @@
+.TH zipbrk "1" "February 2018" "Zip Break 2.1.1b" "User Commands"
+
+.\" /////////////////////////////////////////////////
+.\"     PROGRAM INFORMATION
+.\" /////////////////////////////////////////////////
+.SH NAME
+zipbrk \- manual page for zipbrk program options.
+
+.SH SYNOPSIS
+.B zipbrk
+\fI\,<zip_file> [options]\/\fR
+
+.SH DESCRIPTION
+Zip file format fuzzer and multi-tool.
+
+
+.\" /////////////////////////////////////////////////
+.\"     OPTIONS INFORMATION
+.\" /////////////////////////////////////////////////
+.SH OPTIONS
+
+.TP
+\fB\-e\fR
+Set data encryption flag. (default)
+.IP
+\fB\-\-encryption\-set\fR
+
+.TP
+\fB\-de\fR
+Unset data encryption flag.
+.IP
+\fB\-\-encryption\-unset\fR
+
+.TP
+\fB\-c\fR
+Set compressed size to 0. (non\-reversible)
+.IP
+\fB\-\-zero\-compressed\fR
+
+.TP
+\fB\-u\fR
+Set uncompressed size to 0. (non\-reversible) (CVE\-2004\-0932)
+.IP
+\fB\-\-zero\-uncompressed\fR
+
+.TP
+\fB\-d\fR
+Set date to 0. (non\-reversible)
+.IP
+\fB\-\-zero\-date\fR
+
+.TP
+\fB\-t\fR
+Set time to 0. (non\-reversible)
+.IP
+\fB\-\-zero\-time\fR
+
+.TP
+\fB\-xe\fR
+XOR extract version. (password prompted)
+.IP
+\fB\-\-xor\-extract\fR
+
+.TP
+\fB\-xs\fR
+XOR CRC32. (password prompted) (halts extraction)
+.IP
+\fB\-\-xor\-crc32\fR
+
+.TP
+\fB\-xc\fR
+XOR compressed size. (password prompted)
+.IP
+\fB\-\-xor\-compressed\fR
+
+.TP
+\fB\-xu\fR
+XOR uncompressed size. (password prompted)
+.IP
+\fB\-\-xor\-uncompressed\fR
+
+.TP
+\fB\-s\fR
+Alter zip file signatures. (detectable) (bypass zip blockers)
+.IP
+\fB\-\-signature\-spoof\fR
+
+.TP
+\fB\-ds\fR
+Reset zip file signatures.
+.IP
+\fB\-\-signature\-restore\fR
+
+
+.\" /////////////////////////////////////////////////
+.\"     USAGE AND EXTRA INFORMATION
+.\" /////////////////////////////////////////////////
+.SH EXAMPLE
+zipbrk README.zip \fB\-\-encryption\-unset\fR \fB\-\-xor\-crc32\fR
