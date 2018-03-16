@@ -1,6 +1,8 @@
 # zipbrk 2.1.1
 
-Zip break is a tool to disect, modify, and reassemble zip files for a variety of tasks. It is designed to be cross-platform and as simple as possible to port between varied systems. It has been tested on Windows 9x/2k/XP, Windows Vista/7/8, Fedora 23/24/25, Kali, Debian 8/9, Qubes 3.2, Whonix, Ubuntu 10, FreeBSD 11, and various Android phones. Some examples of usage are:
+Zip break is a tool to disect, modify, and reassemble zip files for a variety of tasks. It is designed to be cross-platform and as simple as possible to port between varied systems. It has been tested on Windows 9x/2k/XP, Windows Vista/7/8, Fedora 23/24/25, Kali, Debian 8/9, Qubes 3.2, Whonix, Ubuntu 10, FreeBSD 11, and various Android phones. To compile on Linux/UNIX machines simply do `gcc -o zipbrk zipbrk.c`. Windows users can open the file into a default project and press **F7**.
+
+Some examples of usage are:
 
 **zipbrk file.zip --encryption-set --xor-crc32**
   
