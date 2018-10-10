@@ -1,0 +1,5 @@
+set -e
+gcc -o zipbrk zipbrk.c
+sudo chown root:root zipbrk zipbrk.1
+sudo mv zipbrk /usr/bin/zipbrk
+sudo mv zipbrk.1 /usr/share/man/man1/zipbrk.1
