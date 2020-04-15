@@ -1,4 +1,6 @@
 Add support for https://packetstormsecurity.com/files/155915/Bitdefender-Malformed-Archive-Bypass.html
+https://blog.zoller.lu/p/advisory-tzo-08-2020-bitdefender.html
+
 
 Add automation scripts
 
