@@ -2,7 +2,7 @@ Add support for https://packetstormsecurity.com/files/155915/Bitdefender-Malform
 https://blog.zoller.lu/p/advisory-tzo-08-2020-bitdefender.html
 
 
-Add automation scripts
+Add automation options
 
 Add support for zip slip https://github.com/snyk/zip-slip-vulnerability
 
