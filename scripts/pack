@@ -1,0 +1,4 @@
+#!/bin/sh
+zip -r $1.zip $1
+zipcloak $1.zip
+zipbrk $1.zip --encryption-unset --xor-crc32
