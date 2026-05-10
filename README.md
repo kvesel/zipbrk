@@ -2,6 +2,20 @@
 
 Zip break is a tool to disect, modify, and reassemble zip files for a variety of tasks. It is designed to be cross-platform and as simple as possible to port between varied systems. It has been tested on Windows 9x/2k/XP, Windows Vista/7/8, Fedora 23/24/25/26/27, Kali, Debian 8/9, Qubes 3.2/4.0, Whonix 13/14, Ubuntu 10, FreeBSD 11, and various Android phones. To compile on Linux/UNIX machines simply execute `gcc -o zipbrk zipbrk.c`. Windows users can open the file into a default Visual Studio (the Community version is now free and works just fine for this) project and press **F7**.
 
+## CVEs Addressed
+
+| CVE              | Triggered by          |
+|------------------|-----------------------|
+| CVE-2004-0932    | -c / -u               |
+| CVE-2014-8139    | -xs                   |
+| CVE-2014-8140    | -xc / -xu             |
+| CVE-2014-8141    | -xc / -xu             |
+| CVE-2015-7696    | -s                    |
+| CVE-2015-7697    | -s                    |
+| CVE-2018-1000035 | -e / -xs              |
+
+## Usage
+
 Some examples of usage are:
 
 **zipbrk file.zip --encryption-set --xor-crc32**
