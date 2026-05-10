@@ -1,4 +1,4 @@
-zipbrk (2.2.0-1) kali-dev; urgency=medium
+zipbrk (2.2.0-0kali1) kali-dev; urgency=medium
 
   * v2.2.0: Security hardening relative to v2.1.1b:
     - pwrite() renamed to fwrite_block() to avoid shadowing POSIX pwrite(2).
