@@ -1,0 +1,22 @@
+Source: zipbrk
+Section: net
+Priority: optional
+Maintainer: Kali Developers <devel@kali.org>
+Build-Depends: debhelper-compat (= 13), gcc
+Standards-Version: 4.6.2
+Rules-Requires-Root: no
+
+Package: zipbrk
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: ZIP file format fuzzer and structural multi-tool
+ zipbrk performs targeted structural mutations on ZIP archives: setting
+ or clearing encryption flags, zeroing compressed/uncompressed size
+ fields, XOR-ing header fields with a password-derived hash, and
+ spoofing or restoring the PK magic signatures used by ZIP blockers.
+ .
+ Originally developed in 2004-2005 in response to CVE-2004-0932 and
+ later expanded to probe InfoZip unzip for heap overflows and
+ out-of-bounds reads. Addresses CVE-2004-0932, CVE-2014-8139,
+ CVE-2014-8140, CVE-2014-8141, CVE-2015-7696, CVE-2015-7697, and
+ CVE-2018-1000035.

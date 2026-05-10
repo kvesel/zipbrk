@@ -1,0 +1,15 @@
+zipbrk (2.2.0-1) kali-dev; urgency=medium
+
+  * v2.2.0: Security hardening relative to v2.1.1b:
+    - pwrite() renamed to fwrite_block() to avoid shadowing POSIX pwrite(2).
+    - Three early-exit password loops replaced by constant-time accumulator
+      (eliminates CWE-208 timing oracle).
+    - ftell() return values checked before use in fseek() (CWE-252).
+    - Format strings corrected: %X -> %lX with explicit (unsigned long) cast.
+    - Negative fseek offset uses explicit (long) cast to prevent size_t wrap.
+    - FLAGS and PWHASH made file-static.
+    - Password scrubbed from stack after PWHASH is derived.
+    - fgets() return values checked.
+    - Added CVE-2018-1000035 to the addressed CVE list.
+
+ -- zipbrk <>  Sat, 10 May 2026 11:51:00 +0000

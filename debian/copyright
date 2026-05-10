@@ -1,0 +1,12 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: zipbrk
+Source: https://github.com/kvesel/zipbrk
+
+Files: *
+Copyright: 2004-2026 zipbrk authors
+License: LicenseRef-zipbrk
+
+License: LicenseRef-zipbrk
+ You are free to use, modify, and distribute this program as you see
+ fit for personal, commercial, or government needs. No point-of-contact
+ for support is provided or implied. This code is provided as-is.
